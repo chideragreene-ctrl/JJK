@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f6f5f1" />
+  <meta name="description" content="Elvis Odoemenam is a creative designer creating thoughtful digital experiences." />
+  <title>Elvis Odoemenam — Designer &amp; Art Director</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { --paper:#f6f5f1; --ink:#171715; --muted:#77766f; --line:#deddd6; --accent:#c5f277; --mono:'DM Mono',monospace; --sans:'Manrope',sans-serif; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:88px; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); -webkit-font-smoothing:antialiased; }
+    a { color:inherit; text-decoration:none; }
+    button { font:inherit; }
+    .wrap { width:min(1160px, calc(100% - 64px)); margin-inline:auto; }
+    .topbar { height:76px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
+    .brand { display:flex; gap:10px; align-items:center; font-size:13px; font-weight:800; letter-spacing:-.04em; }
+    .mark { display:grid; place-items:center; width:25px; height:25px; border-radius:50%; background:var(--ink); color:var(--accent); font-size:12px; }
+    .nav { display:flex; gap:34px; align-items:center; font-size:12px; color:#5e5d57; }
+    .nav a{position:relative;padding-bottom:7px;transition:color .2s,font-weight .2s}.nav a::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .22s ease}.nav a:hover{font-weight:600}.nav a[aria-current=page]{color:var(--ink)}.nav a[aria-current=page]::after{transform:scaleX(1)}
+    .availability { display:flex; align-items:center; gap:8px; font:10px var(--mono); text-transform:uppercase; letter-spacing:.06em; color:#5e5d57; }
+    .dot { width:7px; height:7px; border-radius:50%; background:#8bbd45; box-shadow:0 0 0 4px #8bbd451a; }
+    .hero { min-height:650px; padding:82px 0 70px; display:grid; grid-template-columns:1.15fr .85fr; grid-template-rows:1fr auto; align-items:center; gap:38px; }
+    .hero-portrait { width:min(100%,360px); justify-self:end; margin:0; }
+    .portrait-image { display:block; width:100%; aspect-ratio:.78; object-fit:cover; object-position:center 24%; border:9px solid #f0eee8; box-shadow:0 17px 38px #24201a20,0 2px 8px #24201a18; }
+    .portrait-caption { display:flex; justify-content:space-between; gap:16px; margin-top:11px; color:var(--muted); font:9px var(--mono); letter-spacing:.04em; text-transform:uppercase; }
+    .eyebrow { display:flex; gap:12px; align-items:center; color:var(--muted); font:10px var(--mono); letter-spacing:.08em; text-transform:uppercase; }
+    .eyebrow:before { content:''; width:22px; height:1px; background:#aaa99f; }
+    h1 { max-width:1000px; margin:34px 0 38px; font-size:clamp(58px, 10vw, 132px); line-height:.91; letter-spacing:-.095em; font-weight:500; }
+    h1 span { color:#a3a29b; }
+    .hero-bottom { display:flex; justify-content:space-between; align-items:flex-end; gap:30px; }
+    .intro { max-width:345px; margin:0; color:#64635c; font-size:14px; line-height:1.8; }
+    .scroll-cue { display:flex; gap:12px; align-items:center; font:10px var(--mono); text-transform:uppercase; color:var(--muted); letter-spacing:.08em; }
+    .scroll-cue i { display:grid; place-items:center; width:32px; height:32px; border:1px solid var(--line); border-radius:50%; font-style:normal; font-size:14px; color:var(--ink); }
+    .work { padding:64px 0 112px; border-top:1px solid var(--line); }
+    .section-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:30px; }
+    .section-title { margin:0; font-size:12px; font-weight:600; letter-spacing:-.02em; }
+    .section-meta { color:var(--muted); font:10px var(--mono); }
+    .projects { display:grid; grid-template-columns:1fr 1fr; gap:48px 24px; }
+    .project { min-width:0; }
+    .project:nth-child(even) { margin-top:82px; }
+    .visual { position:relative; overflow:hidden; aspect-ratio:.72; padding:9px; border:1px solid var(--line); background:#e9e6df; box-shadow:0 10px 22px #24201a14; }
+    .visual img { width:100%; height:100%; display:block; object-fit:contain; transition:transform .8s cubic-bezier(.2,.7,.1,1); }
+    .project:hover .visual img { transform:scale(1.035); }
+    .project:nth-child(1) .visual { background:#e7e5df; }
+    .project:nth-child(2) .visual { background:#e7e5df; }
+    .project:nth-child(3) .visual { background:#e7e5df; }
+    .project:nth-child(4) .visual { background:#e7e5df; }
+    .project-info { display:flex; justify-content:space-between; align-items:flex-start; padding-top:15px; }
+    .project h3 { margin:0 0 5px; font-size:15px; font-weight:600; letter-spacing:-.045em; }
+    .project p { margin:0; color:var(--muted); font-size:11px; }
+    .year { padding-top:2px; color:var(--muted); font:10px var(--mono); }
+    .about { padding:95px 0 110px; border-top:1px solid var(--line); display:grid; grid-template-columns:.9fr .66fr 1fr; gap:45px; align-items:center; }
+    .about-portrait { width:100%; max-width:275px; margin:0; }
+    .about-portrait .portrait-image { aspect-ratio:.8; border-width:7px; }
+    .about h2 { max-width:480px; margin:22px 0 0; font-size:clamp(35px,5.3vw,65px); line-height:1.03; letter-spacing:-.075em; font-weight:500; }
+    .about-copy { max-width:410px; align-self:end; color:#65645e; font-size:13px; line-height:1.9; }
+    .about-copy p { margin:0 0 18px; }
+    .text-link { display:inline-flex; align-items:center; gap:9px; margin-top:7px; color:var(--ink); font-size:11px; font-weight:700; border-bottom:1px solid #aaa99f; padding-bottom:5px; }
+    .contact { padding:73px 0 78px; background:var(--ink); color:var(--paper); }
+    .contact-top { display:flex; justify-content:space-between; align-items:flex-start; }
+    .contact .eyebrow { color:#a7a69f; }
+    .contact .eyebrow:before { background:#77766f; }
+    .contact h2 { margin:35px 0 44px; max-width:760px; font-size:clamp(48px,9vw,110px); line-height:.94; letter-spacing:-.085em; font-weight:500; }
+    .contact h2 span { color:var(--accent); }
+    .contact-button { display:inline-flex; align-items:center; gap:25px; padding:14px 17px; border-radius:2px; background:var(--accent); color:var(--ink); font-size:11px; font-weight:700; transition:transform .2s; }
+    .contact-button:hover { transform:translateY(-3px); }
+    .contact-button b { font-size:15px; font-weight:400; }
+    footer { position:relative; min-height:158px; display:flex; justify-content:space-between; align-items:flex-start; margin-top:82px; padding-top:20px; border-top:1px solid #ffffff26; color:#a7a69f; font:9px var(--mono); letter-spacing:.04em; }
+    .socials { display:flex; gap:20px; } .socials a:hover { color:var(--accent); }
+    .footer-mascot { position:absolute; left:45%; top:60px; z-index:2; width:74px; height:82px; margin:0; letter-spacing:normal; transition:left 2.35s cubic-bezier(.2,.7,.2,1),top 2.35s cubic-bezier(.2,.7,.2,1); }
+    footer > span,footer > .socials { position:relative; z-index:3; }
+    .mascot-toggle { position:relative; display:grid; place-items:center; width:74px; height:82px; padding:0; border:0; background:transparent; cursor:pointer; }
+    .mascot-sprite { width:68px; height:72px; overflow:visible; animation:mascot-bob 2.4s ease-in-out infinite; transform-origin:50% 85%; }
+    .mascot-arm { fill:none; stroke:#f5f3ea; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
+    .mascot-arm--wave { transform-box:fill-box; transform-origin:15% 85%; transition:transform .25s ease; }
+    .mascot-toggle:hover .mascot-arm--wave,.mascot-toggle:focus-visible .mascot-arm--wave,.footer-mascot.is-open .mascot-arm--wave { animation:mascot-wave .65s ease-in-out infinite alternate; }
+    .mascot-eye { transform-box:fill-box; transform-origin:center; animation:mascot-blink 4.6s infinite; }
+    .mascot-smile { fill:none; stroke:#201f1c; stroke-width:2.6; stroke-linecap:round; }
+    .mascot-mouth-smile { opacity:0; transition:opacity .18s ease; }
+    .mascot-toggle:hover .mascot-mouth-smile,.mascot-toggle:focus-visible .mascot-mouth-smile,.footer-mascot.is-open .mascot-mouth-smile { opacity:1; }
+    .mascot-toggle:hover .mascot-mouth-neutral,.mascot-toggle:focus-visible .mascot-mouth-neutral,.footer-mascot.is-open .mascot-mouth-neutral { opacity:0; }
+    .mascot-spark { position:absolute; top:6px; right:9px; color:var(--accent); font:16px var(--sans); animation:mascot-sparkle 2s ease-in-out infinite; }
+    .mascot-toggle:focus-visible { outline:1px solid var(--accent); outline-offset:1px; border-radius:50%; }
+    .mascot-note { position:absolute; right:3px; bottom:calc(100% + 10px); width:min(275px,calc(100vw - 42px)); padding:15px 16px 14px; border:1px solid #d9d6cd; border-radius:12px 12px 3px 12px; background:#f7f6f1; color:#201f1c; box-shadow:0 12px 32px #0003; font-family:var(--sans); letter-spacing:normal; animation:mascot-pop .24s cubic-bezier(.2,.75,.2,1) both; }
+    .mascot-note[hidden] { display:none; }
+    .mascot-note-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; color:#77766f; font:8px var(--mono); letter-spacing:.06em; text-transform:uppercase; }
+    .mascot-note-close { display:grid; place-items:center; width:23px; height:23px; border:0; border-radius:50%; background:#e9e7df; color:#333; font-size:16px; line-height:1; cursor:pointer; }
+    .mascot-greeting { margin:0 0 12px; font-size:13px; line-height:1.55; }
+    .mascot-reply { display:inline-flex; align-items:center; gap:7px; padding:8px 10px; border-radius:2px; background:#201f1c; color:#f7f6f1; font-size:9px; font-weight:700; transition:background .2s; }
+    .mascot-reply:hover { background:#454239; }
+    @keyframes mascot-bob { 0%,100%{transform:translateY(0) rotate(-1deg)} 50%{transform:translateY(-5px) rotate(1deg)} }
+    @keyframes mascot-wave { from{transform:rotate(-12deg)} to{transform:rotate(21deg)} }
+    @keyframes mascot-blink { 0%,45%,48%,100%{transform:scaleY(1)} 46.5%,47%{transform:scaleY(.12)} }
+    @keyframes mascot-sparkle { 0%,100%{transform:scale(.65) rotate(-8deg);opacity:.45} 50%{transform:scale(1.15) rotate(12deg);opacity:1} }
+    @keyframes mascot-pop { from{opacity:0;transform:translateY(7px) scale(.97);transform-origin:bottom right} to{opacity:1;transform:translateY(0) scale(1);transform-origin:bottom right} }
+    .reveal { opacity:0; transform:translateY(24px); transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1); }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .delay-1 { transition-delay:.1s; } .delay-2 { transition-delay:.2s; }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition-duration:.01ms!important; animation-duration:.01ms!important; } .reveal { opacity:1; transform:none; } }
+    @media (max-width:700px) {
+      .wrap { width:calc(100% - 40px); } .topbar { height:66px; } .nav { gap:17px; font-size:11px; } .availability { display:none; }
+      .hero { min-height:0; padding:70px 0 55px; grid-template-columns:1fr; grid-template-rows:auto; gap:22px; } h1 { margin:29px 0 35px; font-size:clamp(59px,13vw,90px); }
+      .hero-portrait { width:min(76%,330px); justify-self:center; } .hero-bottom { grid-column:1; align-items:flex-start; flex-direction:column; } .scroll-cue { align-self:flex-end; }
+      .work { padding:54px 0 78px; } .projects { grid-template-columns:1fr; gap:33px; } .project:nth-child(even) { margin-top:0; }
+      .visual { aspect-ratio:.72; padding:7px; } .about { padding:68px 0 75px; grid-template-columns:1fr; gap:28px; } .about-portrait { width:min(74%,300px); justify-self:center; } .about-copy { align-self:auto; }
+      .contact { padding:62px 0 30px; } .contact-top { display:block; } .contact h2 { margin:32px 0 35px; } footer { min-height:205px; margin-top:65px; padding-bottom:4px; flex-wrap:wrap; gap:18px; } .footer-mascot { top:auto; bottom:0; }
+    }
+    @media (max-width:390px) { .nav { gap:10px; font-size:10px; } .brand { font-size:11px; gap:7px; } .mark { width:23px; height:23px; } }
+  
+.nav a.is-leaving::after{transform:scaleX(0)}@keyframes nav-arrive{from{transform:scaleX(0)}to{transform:scaleX(1)}}.nav a.is-entering::after{animation:nav-arrive .36s cubic-bezier(.22,.75,.25,1) both}@media(prefers-reduced-motion:reduce){.nav a.is-entering::after{animation-duration:.01ms}}
+</style>
+</head>
+<body>
+  
+  <header class="wrap topbar">
+    <a class="brand" href="index.html" aria-label="Elvis Odoemenam home"><span class="mark">e.</span> ELVIS ODOEMENAM</a>
+    <nav class="nav" aria-label="Main navigation"><a href="index.html" aria-current="page">Home</a><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+    <div class="availability"><span class="dot"></span> Available for select projects</div>
+  </header>
+  <main id="top">
+    <section class="wrap hero">
+      <div>
+        <div class="eyebrow reveal">Creative designer · FCT, Nigeria</div>
+        <h1 class="reveal delay-1">Designing<br />for <span> what’s next.</span></h1>
+      </div>
+      <figure class="hero-portrait reveal delay-1"><img class="portrait-image" src="artworks/elvis-odoemenam.jpg" alt="Portrait of Elvis Odoemenam" /><figcaption class="portrait-caption"><span>Elvis Odoemenam</span><span>Creative designer · FCT</span></figcaption></figure>
+      <div class="hero-bottom reveal delay-2">
+        <p class="intro">I’m Elvis, a creative designer shaping thoughtful identities and digital experiences for a more considered world.</p>
+        <a class="scroll-cue" href="work.html">Explore selected work <i>↗</i></a>
+      </div>
+    </section>
+    <section class="work" id="work">
+      <div class="wrap">
+        <div class="section-head reveal"><h2 class="section-title">Selected work</h2><span class="section-meta">2025&nbsp;&nbsp; / &nbsp;&nbsp;01—04</span></div>
+        <div class="projects">
+          <a class="project reveal" href="work.html" aria-label="View Kerygma artwork in selected work">
+            <div class="visual"><img loading="lazy" alt="Kerygma campaign artwork: We’ve been quiet for a reason." src="artworks/kerygma-quiet-portrait.png" /></div>
+            <div class="project-info"><div><h3>Kerygma — Quiet</h3><p>Campaign · Digital</p></div><span class="year">2025</span></div>
+          </a>
+          <a class="project reveal delay-1" href="work.html" aria-label="View Netics AI artwork in selected work">
+            <div class="visual"><img loading="lazy" alt="Netics AI campaign artwork: Your business, on autopilot." src="artworks/netics-business-autopilot.png" /></div>
+            <div class="project-info"><div><h3>Netics AI — Autopilot</h3><p>Campaign · Art direction</p></div><span class="year">2025</span></div>
+          </a>
+          <a class="project reveal" href="work.html" aria-label="View Netics AI artwork in selected work">
+            <div class="visual"><img loading="lazy" alt="Netics AI campaign artwork: Every lead deserves a follow-up." src="artworks/netics-follow-up.png" /></div>
+            <div class="project-info"><div><h3>Netics AI — Follow-up</h3><p>Campaign · Digital</p></div><span class="year">2025</span></div>
+          </a>
+          <a class="project reveal delay-1" href="work.html" aria-label="View Netics AI artwork in selected work">
+            <div class="visual"><img loading="lazy" alt="Netics AI campaign artwork: Maybe we need fewer apps." src="artworks/netics-better-apps.png" /></div>
+            <div class="project-info"><div><h3>Netics AI — Better apps</h3><p>Campaign · Digital</p></div><span class="year">2025</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="wrap about" id="about">
+      <div class="reveal"><div class="eyebrow">A little about me</div><h2>Good work starts with good questions.</h2></div>
+      <figure class="about-portrait reveal"><img class="portrait-image" src="artworks/elvis-odoemenam.jpg" alt="Elvis Odoemenam, creative designer" /></figure>
+      <div class="about-copy reveal delay-1"><p>I’m Elvis, a creative designer based in FCT. I work across brand identity, art direction, and digital experiences, helping ideas find a clear and distinctive form.</p><p>I’m drawn to the thinking behind good design: understanding what matters, asking the right questions, and making every detail feel considered.</p><a class="text-link" href="about.html">More about me <span>↗</span></a></div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="contact-top"><div><div class="eyebrow reveal">Have something in mind?</div><h2 class="reveal delay-1">Let’s make<br /><span>it matter.</span></h2><a class="contact-button reveal delay-2" href="contact.html">Tell me about your project <b>↗</b></a></div></div>
+        <footer><span>© 2025 ELVIS ODOEMENAM</span><span>MADE WITH CARE &amp; A LITTLE MISCHIEF</span><div class="socials"><a href="https://www.instagram.com/">INSTAGRAM ↗</a><a href="https://www.linkedin.com/">LINKEDIN ↗</a></div><div class="footer-mascot" id="footer-mascot"><div class="mascot-note" id="mascot-note" role="status" hidden><div class="mascot-note-head"><span>A hello from Elvis</span><button class="mascot-note-close" type="button" aria-label="Close greeting">×</button></div><p class="mascot-greeting">My Lord, hi! 👋</p><a class="mascot-reply" href="contact.html">Say hello back <span>↗</span></a></div><button class="mascot-toggle" type="button" aria-label="Open a greeting from Elvis" aria-expanded="false" aria-controls="mascot-note"><svg class="mascot-sprite" viewBox="0 0 80 84" role="img" aria-label="A little green character smiling and waving"><ellipse cx="39" cy="76" rx="22" ry="4" fill="#000" opacity=".17"/><path d="M20 41c0-15 8-25 21-25s22 10 22 25v15c0 10-9 17-22 17S20 66 20 56V41Z" fill="#c5f277" stroke="#f5f3ea" stroke-width="3"/><path class="mascot-arm" d="M22 48 12 57M61 47l8-12"/><path class="mascot-arm mascot-arm--wave" d="M67 38 70 27l6-5"/><circle cx="76" cy="21" r="3" fill="#f5f3ea"/><ellipse class="mascot-eye" cx="33" cy="45" rx="2.2" ry="3.2" fill="#201f1c"/><ellipse class="mascot-eye" cx="49" cy="45" rx="2.2" ry="3.2" fill="#201f1c"/><ellipse cx="27" cy="52" rx="3" ry="1.5" fill="#ef8e82" opacity=".8"/><ellipse cx="55" cy="52" rx="3" ry="1.5" fill="#ef8e82" opacity=".8"/><path class="mascot-smile mascot-mouth-neutral" d="M37 57h8"/><path class="mascot-smile mascot-mouth-smile" d="M35 56q6 8 13 0"/><path d="m29 71-2 5m27-5 2 5" stroke="#f5f3ea" stroke-width="3" stroke-linecap="round"/></svg><span class="mascot-spark" aria-hidden="true">✳</span></button></div></footer>
+      </div>
+    </section>
+  </main>
+  <script>
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.reveal').forEach((item) => observer.observe(item));
+
+    const mascot = document.querySelector('#footer-mascot');
+    const mascotButton = mascot.querySelector('.mascot-toggle');
+    const mascotNote = mascot.querySelector('.mascot-note');
+    const mascotClose = mascot.querySelector('.mascot-note-close');
+    function setMascotOpen(open) {
+      mascotNote.hidden = !open;
+      mascot.classList.toggle('is-open', open);
+      mascotButton.setAttribute('aria-expanded', String(open));
+    }
+    mascotButton.addEventListener('click', () => setMascotOpen(mascotNote.hidden));
+    mascotClose.addEventListener('click', () => { setMascotOpen(false); mascotButton.focus(); });
+    document.addEventListener('click', (event) => { if (!mascot.contains(event.target)) setMascotOpen(false); });
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !mascotNote.hidden) { setMascotOpen(false); mascotButton.focus(); } });
+    const footer = mascot.closest('footer');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    function letMascotRoam() {
+      if (prefersReducedMotion.matches || !mascotNote.hidden) return;
+      const maxX = Math.max(0, footer.clientWidth - mascot.offsetWidth);
+      const maxY = Math.max(48, footer.clientHeight - mascot.offsetHeight - 4);
+      mascot.style.left = `${Math.round(Math.random() * maxX)}px`;
+      mascot.style.top = `${Math.round(44 + Math.random() * Math.max(0, maxY - 44))}px`;
+    }
+    const roamTimer = window.setInterval(letMascotRoam, 2800);
+    window.addEventListener('resize', letMascotRoam);
+    prefersReducedMotion.addEventListener?.('change', () => { if (prefersReducedMotion.matches) window.clearInterval(roamTimer); });
+  </script>
+<script>
+(() => {
+  const nav = document.querySelector('.nav');
+  if (!nav) return;
+  const currentUrl = new URL(window.location.href);
+  const arrival = sessionStorage.getItem('nav-arrival');
+  if (arrival === currentUrl.pathname) {
+    sessionStorage.removeItem('nav-arrival');
+    const active = nav.querySelector('[aria-current="page"]');
+    if (active) active.classList.add('is-entering');
+  }
+  nav.addEventListener('click', (event) => {
+    const link = event.target.closest('a');
+    if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || link.target || link.hasAttribute('download')) return;
+    const destination = new URL(link.href, window.location.href);
+    if (destination.origin !== currentUrl.origin || destination.pathname === currentUrl.pathname) return;
+    const active = nav.querySelector('[aria-current="page"]');
+    if (!active || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    event.preventDefault();
+    sessionStorage.setItem('nav-arrival', destination.pathname);
+    active.classList.add('is-leaving');
+    window.setTimeout(() => window.location.assign(destination.href), 220);
+  });
+})();
+</script></body>
+</html>
